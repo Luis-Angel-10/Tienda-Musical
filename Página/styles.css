@@ -1,0 +1,271 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #F0F4F8; 
+    color: #333; 
+}
+
+/* Menú de navegación */
+nav {
+    background-color: #1D1D1D;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #FF8C00;
+}
+
+/* Logo */
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+/* Encabezado */
+header {
+    background-color: #1D1D1D;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 3px solid #FF8C00;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+header p {
+    margin: 10px 0;
+    font-size: 1.5em;
+}
+
+/* Secciones */
+section {
+    padding: 40px;
+    margin: 20px;
+    background-color: #FFF;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #0af121;
+}
+
+section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #23e904;
+}
+
+
+.inicio-con-imagen {
+    background-image: url('imagen_2.png'); 
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    text-align: center;
+    padding: 80px 20px; 
+    color: white; 
+    text-shadow: 2px 2px 4px rgba(32, 5, 236, 0.7); 
+}
+
+.inicio-con-imagen h1 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.inicio-con-imagen p {
+    font-size: 1.5em;
+}
+
+#motivadora {
+    text-align: center;
+    margin-top: 20px;
+    padding: 40px;
+    border-radius: 8px;
+    background-image: url('imagen_1.png'); 
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: white; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+}
+
+#motivadora h2 {
+    font-size: 1.8em;
+}
+
+/* Bloque 2 columnas */
+.bloque-2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.bloque-2 section {
+    flex: 1;
+    min-width: 45%;
+}
+
+/* Bloque 4 columnas */
+.bloque-4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Imágenes dentro de las secciones */
+section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajusta el tamaño de la imagen */
+.pequena-imagen {
+    width: 100px; 
+    height: auto;
+    display: block;
+    margin-top: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.inline-sections {
+    display: flex;
+    justify-content: space-between; 
+    align-items: stretch; 
+    gap: 30px;
+    flex-wrap: nowrap; 
+}
+
+.inline-sections section {
+    flex: 1; 
+    min-width: 45%; 
+    max-width: 50%; 
+    background-color: #FFF; 
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Media Queries */
+
+/* Laptops */
+@media (max-width: 1024px) {
+    .bloque-2 {
+        flex-direction: column;
+    }
+
+    .bloque-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .inline-sections {
+        flex-direction: column;
+    }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+    nav {
+        display: none; 
+    }
+
+    .bloque-2 {
+        flex-direction: column;
+    }
+
+    .bloque-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .inline-sections {
+        flex-direction: column;
+    }
+
+    .inline-sections section {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .inline-sections {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .inline-sections section {
+        max-width: 90%; 
+    }
+}
+
+/* Pie de página */
+footer {
+    background-color: #1D1D1D;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.footer-info {
+    flex: 1;
+}
+
+.footer-redes a {
+    margin: 0 10px;
+}
+
+.footer-redes img {
+    width: 30px;
+    height: auto;
+}
